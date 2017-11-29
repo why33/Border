@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>CSS3-border</title>
+    <link rel='stylesheet' href='css3_border.css'/>
+    <style>
+         form[name=sss]{
+            font-size:20px;
+            
+        }
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <!-- 第一种样式 -->
+        <div class="border-style-1">
+              <h2>Div</h2>
+              <img src='5.jpeg'/>
+              <p>To be or not to be,this is a question.</p>
+              <a href='http://www.baidu.com'>Learning</a>
+        </div>
+        <div class="border-style-2">
+            <h2>Div</h2>
+            <img src='5.jpeg'/>
+            <p>To be or not to be,this is a question.</p>
+            <a href='http://www.baidu.com'>Learning</a>
+        </div>
+        <div class="border-style-3">
+            <h2>Div</h2>
+            <img src='5.jpeg'/>
+            <p>To be or not to be,this is a question.</p>
+            <a href='http://www.baidu.com' name='ss'>Learning</a>
+        </div>
+        <svg class="progress-ring">
+            <circle class='progress-ring-circle' stroke='white' stroke-width='10' fill='transparent' r="100" cx='150' cy='150' />
+        </svg>
+       
+        
+    </div>
+    <div class="text"></div>
+    <div class='animation-steps'></div>
+    <h1 class="timing-function" id="cc">Animation-timing-function is amazing what we can remember.</h1>
+    <hr>
+    <div class="egg">
+        <div class="eggTrue"></div>
+        <div class="eggFalsel"></div>
+        <div class="eggFalser"></div>
+    </div>
+    <form name="sss" style="background-color:yellow;">
+        <input type="text" value="12" />
+    </form>
+    <form  id="a" name="aa">
+        <input type="radio"/>
+    </form>
+    <form></form>
+    <div id='divs' style="width:100px;height:100px;border:1px solid black;">
+        <button id="but">快捷键访问</button><br>
+        <a id='aas' href="www.baodu.com">sdsd</a>
+    </div>
+    
+    <script>
+        // console.log(cc.childNodes[0].nodeValue)
+        // var attr=document.createAttribute('title');
+        // attr.value='aaaa'
+        // console.log(attr,attr.nodeValue)
+        // var text=document.createTextNode('i am girl')
+        // console.log(text,text.nodeValue)
+        // console.log(cc.childNodes)
+        // console.log(document.querySelectorAll('a'))
+        // console.log('--------------------------DOM')
+        var formes=document.forms;
+        console.log(formes)
+        // console.log(formes.namedItem('aa'))
+        // console.log(formes.sss)
+        // console.log(formes['sss'])
+        // for(var index in formes){
+        //     console.log(index)
+        // }
+        // var arrf=Array.prototype.slice.call(formes)
+        // console.log(arrf)
+        // for(var ind in arrf){
+        //     console.log(ind)
+        // }
+        // // console.log('-----------------------------------')
+        // // console.log(formes[0])
+        // // formes[0].name='dhfh';
+        // // formes[0].setAttribute("age",12)
+        // // console.log(formes[0])
+        // // console.log(formes[0].attributes.removeNamedItem('name'))
+        // // console.log(formes[0])
+        // // var type=document.createAttribute('sex')
+        // // type.nodeValue='girl';
+        // // console.log(type)
+        // // console.log(formes[0].attributes.setNamedItem(type))
+        // // console.log(formes[0])
+        // // // formes[0].removeAttribute('name');
+        // // console.log(formes[0])
+        // // var getA=formes[0].getAttributeNode("name");
+        // // console.log(getA)
+        // // var xx=formes[0].removeAttributeNode(getA)
+        // // console.log(formes[0])
+        // // console.log(xx)
+        // // console.log(formes[0].hasAttribute('name'))
+        // // console.log(formes[0].hasAttribute('sex'))
+        // // console.log(formes[0].hasAttributes())
+        // // console.log(formes[0].style["fontSize"])
+        // // console.log(formes[0].style.cssText)
+        // // formes[0].style.setProperty("border",'3px solid yellow')
+        // // console.log(formes[0].style.cssText)
+        // var b=document.getElementsByTagName('html')[0]
+        // console.log(document.nodeValue)
+        // var attr=document.createAttribute('name');
+        // attr.nodeValue='aaa';
+        // var text=document.createTextNode('add')
+        // console.log(text.nodeValue)
+        // console.log(document.createDocumentFragment())
+        // // formes[0].currentStyle["backgroundColor"]='red';
+        // console.log(formes[0].currentStyle)
+        // formes[0].contentEditable=true;
+        // console.log(formes[0].isContentEditable)
+        // // but.accessKey='k';
+        // console.log(typeof but.accessKey)
+
+        but.onclick=function(e){
+            // alert(e.cancelable);
+            alert()
+            console.log(e?e:window.event)
+            alert(1)
+            
+            // console.log(e.clientX,e.clientY)
+            // console.log(e.screenX,e.screenY)
+            // console.log(e.offsetX,e.offsetY)
+            // console.log(e.pageX,e.pageY)
+            var scroll=document.documentElement.scrollTop;
+            console.log(scroll)
+            return false;
+             e?e.stopPropagation():window.event.cancelBubble=true;
+           
+            
+        }
+        
+        divs.onclick=function(){
+           
+            alert('divs')
+
+        }
+        console.log(aas)
+       
+        aas.onclick=function(e){
+            // e.preventDefault();
+            //  e?e.stopPropagation():window.event.cancelBubble=true;
+            // var e=e?e:window.event;
+            // console.log(e,e.returnValue)
+            // alert(e.returnValue)
+            alert('a')
+           return false; 
+
+            // window.event?window.event.cancelBubble=true:e.stopPropagation();
+            // window.event?window.event.returnValue=false:e.preventDefault();
+            //  console.log(e?e:window.event)
+            // window.event.returnValue=false;           
+             
+            
+        }
+
+        // console.log(document.body)
+        console.log(formes[0].addEventListener)
+        console.log(formes[0].attachEvent)
+        console.log(formes[0].ownerDocument.documentElement)
+        console.log(document.documentElement)
+        window.oncontextmenu=function(){
+            return false;
+        }
+        // window.onbeforeunload=function(e){
+           
+        //     var e=e||window.event;
+        //     if(e){
+        //         e.returnValue='关闭提示'
+        //     }
+        //     return '关闭提示';
+        // }
+        window.onpagehide=function(){
+            alert()
+        }
+    </script>
+
+</body>
+</html>
